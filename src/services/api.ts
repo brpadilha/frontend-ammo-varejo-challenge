@@ -7,6 +7,7 @@ const api = axios.create({
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type, Authorization, Content-Length, X-Requested-With",
+    "Authorization":"https://frontend-ammo-varejo-challenge.vercel.app/"
 }
 });
 
