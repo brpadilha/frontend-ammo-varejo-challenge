@@ -41,13 +41,13 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   const [nameParams, setNameParams] = useState<string>('');
   const [pagination, setPagination] = useState<number>(0);
   const [error, setError] = useState<string>('');
-
+  console.log(import.meta.env)
   useEffect(() => {
     async function fetchData() {
 
       try {
         const response = await api.get<ProductList>(
-          `http://localhost:3000/products`,
+          `${import.meta.env.VITE_API_URL}/products`,
           {
             params: {
               name: nameParams,
