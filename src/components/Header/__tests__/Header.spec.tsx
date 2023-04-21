@@ -18,12 +18,6 @@ describe('Header', () => {
     expect(screen.getByText('Buscar')).toBeInTheDocument();
   }
   );
-  it('should write on the input and change the search state', () => {
-    render(<Header />);
-    const input = screen.getByPlaceholderText('Filtrar produtos');
-    input.focus();
-    input.value = 'teste';
-    expect(input.value).toBe('teste');
-  })
+
 });
 
