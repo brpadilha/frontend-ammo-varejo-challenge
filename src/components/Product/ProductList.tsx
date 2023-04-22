@@ -33,12 +33,13 @@ export function ProductList({ name, description, promotionPrice, price, images }
           <ProductTitle>{name}</ProductTitle>
           <ProductDescription>{description}</ProductDescription>
         </DescriptionContainer>
-        <PriceContainer>
-          <Price isPromotional={!!promotionPrice}>R${price}</Price>
-          <span>por</span>
-          <Price > R$ {promotionPrice}</Price>
-        </PriceContainer>
+
       </InfoProduct>
+      <PriceContainer>
+        <Price isPromotional={!!promotionPrice}>R${price}</Price>
+        <span>por</span>
+        <Price > R$ {promotionPrice}</Price>
+      </PriceContainer>
     </Container>
 
   )

@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  @media (max-width: 980px) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  align-items: center;
   height: fit-content;
   border: 2px solid ${({ theme }) => theme["gray-300"]};
   border-radius: 2px;
@@ -11,12 +16,16 @@ export const Container = styled.div`
 `
 
 export const Images = styled.ul`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  @media (max-width: 660px) {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
   flex-direction: row;
   align-items: center;
   gap: 1rem;
   list-style: none;
-
 `
 
 export const Image = styled.img`
@@ -46,7 +55,6 @@ export const ProductDescription = styled.p`
   font-size: 1rem;
   max-lines: 1;
   color: ${({ theme }) => theme["gray-500"]};
-  max-width: 70%;
 `
 
 export const DescriptionContainer = styled.div`
