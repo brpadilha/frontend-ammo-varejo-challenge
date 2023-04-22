@@ -1,8 +1,7 @@
 import { useContext } from "react"
-import { Container, ContainerHeader, ListProducts, Title } from "./Listing.styles"
+import { Container, ContainerHeader, Content, ListProducts, Title } from "./Listing.styles"
 import { ProductList } from "../Product/ProductList"
 import { ProductContext } from '../../context/ProcutContext';
-import { Pagination } from "../Pagination/Pagination";
 
 
 export const ErrorMessage: {
@@ -14,7 +13,7 @@ export function Listing() {
   const { productList, error } = useContext(ProductContext)
   const products = productList.products
   return (
-    <>
+    <Content>
       <ContainerHeader>
         <Title>Lençol avulso</Title>
       </ContainerHeader>
@@ -38,11 +37,10 @@ export function Listing() {
                 )
                 )}
               </ListProducts>
-              <Pagination />
             </>
         }
       </Container>
-    </>
+    </Content>
 
   )
 }

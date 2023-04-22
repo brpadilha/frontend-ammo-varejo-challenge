@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { HEADER_HEIGHT, HEADER_HEIGHT_MOBILE } from "../Header/Header.styles";
+import { BOTTOM_HEIGHT } from "../Pagination/Pagination.styles";
 
 export const ContainerHeader = styled.div`
   display: flex;
@@ -14,17 +16,18 @@ export const Title = styled.h1`
   font-size: 32px;
   font-weight: 100;
 `
-
+export const Content = styled.div`
+  margin-top: ${HEADER_HEIGHT_MOBILE};
+  @media (min-width: 660px) {
+    margin-top: ${HEADER_HEIGHT};
+  }
+`
 
 export const ListProducts = styled.ul`
   display: flex;
   flex-direction: column;
-  overflow: auto;
   width: 90%;
-  height: 40rem;
-  @media(min-width: 768px) {
-    height: 38rem;
-  }
+  margin-bottom: ${BOTTOM_HEIGHT};
 `
 
 export const Container = styled.div`

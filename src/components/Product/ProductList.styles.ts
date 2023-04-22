@@ -17,6 +17,8 @@ export const Container = styled.div`
   }
 `
 
+
+
 export const Images = styled.ul`
   display: flex;
   @media (max-width: 660px) {
