@@ -18,11 +18,11 @@ export const Container = styled.div`
 `
 
 export const Images = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   @media (max-width: 660px) {
-    grid-template-columns: 1fr 1fr;
+    max-width: 22rem;
     justify-items: center;
+    overflow: scroll;
   }
   flex-direction: row;
   align-items: center;
