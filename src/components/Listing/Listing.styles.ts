@@ -20,8 +20,11 @@ export const ListProducts = styled.ul`
   display: flex;
   flex-direction: column;
   overflow: auto;
-  height: 38rem;
   width: 90%;
+  height: 40rem;
+  @media(min-width: 768px) {
+    height: 38rem;
+  }
 `
 
 export const Container = styled.div`
