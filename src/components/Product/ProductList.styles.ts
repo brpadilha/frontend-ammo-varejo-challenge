@@ -13,6 +13,7 @@ export const Container = styled.div`
     grid-template-columns: 1fr;
     justify-items: center;
     margin: 0;
+    gap: 0.5rem;
   }
 `
 
