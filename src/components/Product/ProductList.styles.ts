@@ -33,6 +33,7 @@ export const Images = styled.ul`
 export const Image = styled.img`
   width: 100px;
   height: 100px;
+
   border-radius: 5px;
 `
 

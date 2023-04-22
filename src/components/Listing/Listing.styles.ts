@@ -15,12 +15,14 @@ export const Title = styled.h1`
   font-weight: 100;
 `
 
+
 export const ListProducts = styled.ul`
   display: flex;
   flex-direction: column;
-  height: 2rem;
-  overflow: auto;
-  height: 38rem;
+  @media (min-width: 660px) {
+    overflow: auto;
+    height: 38rem;
+  }
   width: 90%;
 `
 
