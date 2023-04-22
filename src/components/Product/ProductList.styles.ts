@@ -3,16 +3,17 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: grid;
   grid-template-columns: auto 1fr auto;
-  @media (max-width: 980px) {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
   align-items: center;
   height: fit-content;
   border: 2px solid ${({ theme }) => theme["gray-300"]};
   border-radius: 2px;
   margin: 0 4rem;
   padding: 0.5rem;
+  @media (max-width: 980px) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin: 0;
+  }
 `
 
 export const Images = styled.ul`
