@@ -16,6 +16,7 @@ interface ProductContextInterface {
   pagination: number;
   setPagination: React.Dispatch<React.SetStateAction<number>>;
   error?: string;
+  loading?: boolean;
 }
 
 export const ProductContext = React.createContext<ProductContextInterface>({
@@ -29,7 +30,8 @@ export const ProductContext = React.createContext<ProductContextInterface>({
   setNameParams: () => null,
   pagination: 0,
   setPagination: () => null,
-  error: ''
+  error: '',
+  loading: false
 });
 
 type ProductProviderProps = {
@@ -41,10 +43,13 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   const [nameParams, setNameParams] = useState<string>('');
   const [pagination, setPagination] = useState<number>(0);
   const [error, setError] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
+
   useEffect(() => {
     async function fetchData() {
 
       try {
+        setLoading(true);
         const response = await api.get<ProductList>(
           `products`,
           {
@@ -55,7 +60,9 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
           }
         );
         setProductList(response.data);
+        setLoading(false);
       } catch (error: any) {
+        setLoading(false);
         setError(error.code)
       }
 
@@ -66,7 +73,7 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
   }, [pagination, nameParams]);
 
   return (
-    <ProductContext.Provider value={{ productList, setProductList, setNameParams, nameParams, setPagination, pagination, error }}>
+    <ProductContext.Provider value={{ productList, setProductList, setNameParams, nameParams, setPagination, pagination, error, loading }}>
       {children}
     </ProductContext.Provider>
   );

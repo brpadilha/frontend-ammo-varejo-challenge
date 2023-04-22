@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { HEADER_HEIGHT, HEADER_HEIGHT_MOBILE } from "../Header/Header.styles";
 import { BOTTOM_HEIGHT } from "../Pagination/Pagination.styles";
 
+
 export const ContainerHeader = styled.div`
   display: flex;
   height: 4rem;
@@ -34,4 +35,13 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`
+
+export const ContainerLoading = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  width: 100%;
+  background-color: ${({ theme }) => theme["gray-300"]};
 `
