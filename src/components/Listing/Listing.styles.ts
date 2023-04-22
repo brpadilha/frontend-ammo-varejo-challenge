@@ -19,10 +19,8 @@ export const Title = styled.h1`
 export const ListProducts = styled.ul`
   display: flex;
   flex-direction: column;
-  @media (min-width: 660px) {
-    overflow: auto;
-    height: 38rem;
-  }
+  overflow: auto;
+  height: 38rem;
   width: 90%;
 `
 
