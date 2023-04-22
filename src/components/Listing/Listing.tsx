@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { Container, ContainerHeader, Content, ListProducts, Title } from "./Listing.styles"
+import { Container, ContainerHeader, ListProducts, Title } from "./Listing.styles"
 import { ProductList } from "../Product/ProductList"
 import { ProductContext } from '../../context/ProcutContext';
 import { Pagination } from "../Pagination/Pagination";
