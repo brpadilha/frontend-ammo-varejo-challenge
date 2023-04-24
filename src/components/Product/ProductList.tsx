@@ -21,6 +21,7 @@ export function ProductList({ name, description, promotionPrice, price, images }
           images.map(image => (
             <li key={image.id}>
               <Image
+                alt={name}
                 src={`https://raw.githubusercontent.com/brpadilha/backend-ammo-varejo-challenge/main/src${image.url}`}
               />
             </li>

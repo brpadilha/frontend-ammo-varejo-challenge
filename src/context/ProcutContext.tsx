@@ -47,7 +47,7 @@ export const ProductProvider = ({ children }: ProductProviderProps) => {
 
   useEffect(() => {
     async function fetchData() {
-
+      console.log('fetchData')
       try {
         setLoading(true);
         const response = await api.get<ProductList>(

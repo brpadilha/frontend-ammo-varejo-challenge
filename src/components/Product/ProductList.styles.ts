@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.li`
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
